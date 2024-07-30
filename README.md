@@ -27,8 +27,8 @@ output "node_names" {
 ## How does it work?
 1. Script will list current node_ips and node_names.
 2. Will apply terraform configs.
-3. Compare them with the new node_ips and node_names.
-4. Then will automatically join new nodes to the cluster.
+3. Grab new node_ips and node_names after terraform apply.
+4. Then will automatically join new nodes (which we get from comparing old IP list with new IP list) to the cluster.
 5. Lastly will set kubernetes labels.
 
 > It will get the token from ./token file - USE DIFFERENT METHOD!!!
